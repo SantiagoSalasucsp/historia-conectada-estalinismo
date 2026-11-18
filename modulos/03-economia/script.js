@@ -1,45 +1,64 @@
-// Este archivo controla SOLO este módulo. Sus datos están en contenido.js.
+// Interacciones sencillas y locales del módulo 3.
 'use strict';
 const contenido = window.MODULO;
 const panel = document.querySelector('#panel');
-const botones = document.querySelector('#pestanas');
+function crear(tipo, texto, clase) {
+  const elemento = document.createElement(tipo);
+  if (texto) elemento.textContent = texto;
+  if (clase) elemento.className = clase;
+  return elemento;
+}
+function mostrarRelacion() {
+  panel.append(crear('p', 'Selecciona una conexión para ver cómo se relacionan el campo y la industria.', 'instruccion'));
+  const botones = crear('div', '', 'relaciones');
+  const ficha = crear('article', '', 'ficha-relacion'); ficha.setAttribute('aria-live','polite');
+  function elegir(indice) {
+    const relacion = contenido.relaciones[indice];
+    botones.querySelectorAll('button').forEach((boton, i) => {
+      boton.classList.toggle('seleccionada', i === indice);
+      boton.setAttribute('aria-pressed', String(i === indice));
+    });
+    ficha.replaceChildren(crear('span', relacion.fecha, 'numero-panel'), crear('h4', relacion.nombre), crear('p', relacion.hecho), crear('p', relacion.importancia, 'importancia'));
+  }
+  contenido.relaciones.forEach((relacion, indice) => {
+    const boton = crear('button', relacion.nombre);
+    boton.addEventListener('click', () => elegir(indice)); botones.append(boton);
+  });
+  panel.append(botones, ficha); elegir(0);
+}
 function mostrarApartado(indice) {
   const apartado = contenido.apartados[indice];
   document.querySelectorAll('[data-apartado]').forEach((boton, i) => {
     boton.classList.toggle('activo', i === indice);
     boton.setAttribute('aria-pressed', String(i === indice));
   });
-  panel.replaceChildren();
-  const numero = document.createElement('span'); numero.className = 'numero-panel'; numero.textContent = '0' + (indice + 1);
-  const titulo = document.createElement('h3'); titulo.textContent = apartado.titulo;
-  const texto = document.createElement('p'); texto.textContent = apartado.texto || 'Contenido pendiente de incorporar.';
-  texto.className = apartado.texto ? '' : 'pendiente';
-  const cita = document.createElement('p'); cita.className = 'cita'; cita.textContent = apartado.cita || 'Cita y localizador de la evidencia: pendientes.';
-  panel.append(numero, titulo, texto, cita);
+  panel.replaceChildren(crear('span', apartado.periodo, 'numero-panel'), crear('h3', apartado.titulo));
+  if (indice === 3) mostrarRelacion();
+  apartado.puntos.forEach(([titulo, texto]) => {
+    const punto = crear('article', '', 'punto-economia');
+    punto.append(crear('h4', titulo), crear('p', texto)); panel.append(punto);
+  });
+  const idea = crear('aside', '', 'idea-economia');
+  idea.append(crear('span', 'QUÉ DEBES RECORDAR', 'etiqueta'), crear('p', apartado.idea)); panel.append(idea);
+  const fuentes = crear('div', '', 'citas-economia');
+  fuentes.append(crear('span', 'Fuentes: '));
+  apartado.fuentes.forEach(id => {
+    const enlace = crear('a', '[' + id + ']'); enlace.href = '#fuente-' + id;
+    enlace.setAttribute('aria-label','Consultar referencia ' + id); fuentes.append(enlace);
+  });
+  panel.append(fuentes);
 }
 contenido.apartados.forEach((apartado, indice) => {
-  const boton = document.createElement('button'); boton.textContent = apartado.titulo; boton.dataset.apartado = indice;
-  boton.addEventListener('click', () => mostrarApartado(indice)); botones.append(boton);
+  const boton = crear('button', '0' + (indice + 1) + ' · ' + apartado.titulo);
+  boton.dataset.apartado = indice;
+  boton.addEventListener('click', () => mostrarApartado(indice)); document.querySelector('#pestanas').append(boton);
 });
-function completarTexto(selector, texto) {
-  const lugar = document.querySelector(selector); if (!lugar) return;
-  lugar.textContent = texto || 'Pendiente de completar.';
-  lugar.classList.toggle('pendiente', !texto);
-}
-completarTexto('#referencias', contenido.referencias);
-completarTexto('#conclusion', contenido.conclusion);
+contenido.referencias.forEach(fuente => {
+  const articulo = crear('article', '', 'referencia-economia'); articulo.id = 'fuente-' + fuente.id;
+  const enlace = crear('a', 'Consultar fuente ↗'); enlace.href = fuente.url; enlace.target = '_blank'; enlace.rel = 'noopener noreferrer';
+  articulo.append(crear('span', fuente.id, 'numero-panel'), crear('p', fuente.texto));
+  if (fuente.url) articulo.append(enlace);
+  document.querySelector('#referencias').append(articulo);
+});
+document.querySelector('#nota-bibliografica').textContent = contenido.notaBibliografica;
 mostrarApartado(0);
-// Recurso adicional: comparar evidencia y perspectiva; no calcula una verdad histórica.
-const selectores = document.querySelectorAll('[data-fuente]');
-selectores.forEach(selector => {
-  contenido.fuentes.forEach((fuente, indice) => { const opcion = document.createElement('option'); opcion.value = indice; opcion.textContent = fuente.titulo; selector.append(opcion); });
-  const actualizar = () => {
-    const fuente = contenido.fuentes[Number(selector.value)];
-    const tarjeta = selector.closest('article');
-    tarjeta.querySelector('[data-perspectiva]').textContent = fuente.perspectiva || 'Perspectiva y propósito pendientes.';
-    tarjeta.querySelector('[data-evidencia]').textContent = fuente.evidencia || 'Evidencia y localizador pendientes.';
-    tarjeta.querySelector('[data-limites]').textContent = fuente.limites || 'Límites de la fuente pendientes.';
-    tarjeta.querySelector('[data-referencia]').textContent = fuente.referencia || 'Referencia completa pendiente.';
-  };
-  selector.value = selector.dataset.fuente; selector.addEventListener('change', actualizar); actualizar();
-});

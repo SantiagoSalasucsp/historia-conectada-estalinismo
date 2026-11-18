@@ -216,4 +216,4 @@ Tener un repositorio en GitHub no publica por sí solo la web: hay que configura
 
 **¿Por qué no funciona localhost en el equipo de otro compañero?** Porque localhost siempre identifica la computadora de quien abre la dirección. Debe abrir su copia o visitar un enlace publicado.
 
-**¿Qué falta por terminar?** El módulo 3 sigue siendo una maqueta pendiente de información; los videos solo están integrados donde fueron entregados. Esta guía describe el código actual, no certifica que todo el producto académico esté finalizado.
+**¿Qué falta por terminar?** Los siete módulos tienen contenido incorporado; los videos solo están integrados donde fueron entregados. Esta guía describe el código actual, no certifica que todo el producto académico esté finalizado.

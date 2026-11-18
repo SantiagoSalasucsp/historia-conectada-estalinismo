@@ -2,3 +2,6 @@
 
 /* Nombres de los siete integrantes. */
 .nombre-integrante{font-size:13px;line-height:1.5;display:block}.integrantes li{align-items:flex-start}.integrantes li>span:first-child{padding-top:4px}@media(max-width:1050px){.integrantes ol{grid-template-columns:repeat(4,1fr)}}@media(max-width:600px){.integrantes ol{grid-template-columns:repeat(2,1fr)}}
+
+/* Identidad del curso en la cabecera. */
+.cabecera .marca{font:20px/1.2 Georgia,serif;max-width:220px}@media(max-width:600px){.cabecera .marca{font-size:17px;max-width:145px}}
