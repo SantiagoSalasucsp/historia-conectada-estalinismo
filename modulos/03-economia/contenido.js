@@ -1,4 +1,4 @@
-// Síntesis de la parte 3 aportada por el equipo.
+// Parte 3 ampliada a partir del documento del equipo.
 window.MODULO = {
   "numero": 3,
   "apartados": [
@@ -8,15 +8,15 @@ window.MODULO = {
       "puntos": [
         [
           "De la NEP a la planificación",
-          "A finales de los años veinte, Stalin abandonó progresivamente la economía mixta de la NEP e impuso una transformación dirigida por el Estado."
+          "La Nueva Política Económica (NEP) combinaba el control estatal de sectores importantes con espacios de comercio y producción privados. A finales de los años veinte, Stalin abandonó progresivamente ese modelo y promovió una transformación dirigida desde el Estado. El giro de 1928 amplió la planificación y redujo el margen de decisión de productores y empresas."
         ],
         [
           "El objetivo del régimen",
-          "Acelerar la industrialización, reducir el atraso tecnológico y fortalecer la capacidad militar e industrial de la URSS frente a las potencias capitalistas."
+          "Stalin buscaba transformar un país predominantemente agrario en una gran potencia industrial y militar. Consideraba necesario reducir rápidamente la distancia tecnológica con las potencias capitalistas. Por eso, el régimen movilizó recursos, trabajadores e inversiones hacia actividades que juzgaba estratégicas, aunque las necesidades de consumo de la población quedaran en segundo plano."
         ],
         [
           "El papel del Gosplan",
-          "El organismo estatal de planificación fijaba objetivos de producción mediante planes quinquenales. El primer plan, de 1928–1932, priorizó la industria pesada."
+          "El Gosplan era el organismo estatal encargado de planificar la economía. Los planes quinquenales establecían objetivos de producción e inversión para periodos de cinco años. El primer plan, de 1928–1932, priorizó el carbón, el acero, la electrificación y la maquinaria: se buscaba crear la base material para ampliar la industria soviética."
         ]
       ],
       "idea": "La prioridad pasó a ser una transformación acelerada desde el Estado, con metas obligatorias de producción.",
@@ -32,15 +32,19 @@ window.MODULO = {
       "puntos": [
         [
           "Acero, carbón y maquinaria",
-          "La inversión se concentró en la industria pesada y la electrificación. Proyectos como Magnitogorsk atrajeron trabajadores del campo, con viviendas y servicios insuficientes."
+          "La inversión se concentró en la industria pesada, la energía y la construcción de grandes complejos productivos. Estas actividades debían proporcionar materiales y equipos para el desarrollo industrial. La producción de bienes de consumo recibió menor prioridad, por lo que el crecimiento de las fábricas no significó que la población dispusiera de más alimentos, ropa o viviendas adecuadas."
+        ],
+        [
+          "Nuevas ciudades y migración",
+          "Proyectos como Magnitogorsk, en los Urales, atrajeron a numerosos trabajadores procedentes del campo. La llegada de población fue más rápida que la construcción de viviendas y servicios. En las nuevas zonas industriales muchos vivían en barracas; en otras ciudades, las familias compartían espacios en apartamentos comunales o kommunalkas."
         ],
         [
           "Productividad y disciplina",
-          "El estajanovismo, impulsado desde 1935, celebró los récords laborales y premió a trabajadores destacados. También sirvió para elevar las exigencias de producción."
+          "Desde 1935, el estajanovismo convirtió los récords de producción en ejemplos de heroísmo laboral. Los trabajadores destacados obtenían reconocimiento y privilegios, pero la campaña también servía para aumentar las normas exigidas al conjunto de los obreros. La presión por cumplir las metas se combinó con una disciplina laboral cada vez más estricta."
         ],
         [
           "Trabajo forzado",
-          "El Gulag suministró mano de obra para minas, explotación forestal e infraestructuras, como el canal Mar Blanco–Báltico, bajo condiciones extremadamente duras."
+          "El sistema de campos del Gulag suministró mano de obra para la minería, la explotación forestal y grandes infraestructuras. Entre estas obras estuvo el canal Mar Blanco–Báltico. Los presos trabajaban en condiciones extremadamente duras, a menudo en regiones remotas, con alimentación insuficiente y elevados riesgos para su salud y su vida."
         ]
       ],
       "idea": "El crecimiento industrial convivió con escasez de bienes de consumo, presión laboral y un enorme costo humano.",
@@ -57,15 +61,19 @@ window.MODULO = {
       "puntos": [
         [
           "Reorganizar el campo",
-          "La colectivización se aceleró a partir de 1929. Los campesinos fueron presionados u obligados a integrarse en koljoses; también existían sovjoses estatales. Las estaciones de máquinas y tractores reforzaron la intervención estatal."
+          "La colectivización se aceleró a partir de 1929. Los campesinos fueron presionados u obligados a reunir tierras, ganado y herramientas en unidades colectivas. En los koljoses, la producción se organizaba colectivamente y debía cumplir entregas al Estado; los sovjoses eran explotaciones estatales con trabajadores asalariados. Las estaciones de máquinas y tractores reforzaron el control estatal sobre la actividad agrícola."
         ],
         [
-          "Deskulakización y resistencia",
-          "Los señalados como kulaks sufrieron confiscaciones, deportaciones y violencia. La resistencia incluyó el sacrificio de ganado, lo que agravó las pérdidas de la producción agrícola."
+          "La deskulakización",
+          "El régimen presentó a los kulaks, identificados como campesinos prósperos, como enemigos de la transformación socialista. La etiqueta se aplicó también de forma amplia contra personas que se resistían a las políticas agrarias. Los señalados sufrieron confiscaciones, expulsiones y deportaciones; algunos fueron ejecutados. Así, la reorganización económica del campo estuvo acompañada de violencia política."
+        ],
+        [
+          "Resistencia y pérdidas agrícolas",
+          "Parte del campesinado se resistió a entregar sus bienes y a perder autonomía sobre la producción. Una forma de resistencia fue sacrificar animales antes de incorporarlos a las granjas colectivas. Esto, junto con la desorganización del proceso, agravó las pérdidas ganaderas y dificultó la recuperación de la agricultura."
         ],
         [
           "La hambruna de 1932–1933",
-          "La desorganización agrícola, las requisas y otras políticas coercitivas contribuyeron a una hambruna devastadora en varias regiones. En Ucrania se conoce como Holodomor."
+          "La desorganización agrícola, las requisas y otras políticas coercitivas contribuyeron a una hambruna devastadora que afectó a Ucrania, Kazajistán y otras regiones soviéticas. En Ucrania se conoce como Holodomor. Mientras el Estado exigía entregas de grano y mantenía exportaciones, muchas comunidades sufrían una falta extrema de alimentos, con consecuencias humanas catastróficas."
         ]
       ],
       "idea": "La intervención estatal en el campo encontró resistencia y produjo consecuencias humanas catastróficas.",
@@ -90,19 +98,19 @@ window.MODULO = {
     {
       "nombre": "Abastecer ciudades",
       "fecha": "ALIMENTOS",
-      "hecho": "La expansión de fábricas y ciudades aumentaba la necesidad de alimentar a los trabajadores urbanos. El Estado buscó controlar la entrega de productos agrícolas.",
+      "hecho": "La construcción de fábricas y el crecimiento de las ciudades aumentaron la necesidad de alimentar a los trabajadores urbanos. El Estado buscó asegurar ese abastecimiento mediante el control de las entregas agrícolas. De este modo, las decisiones sobre la industria afectaban directamente a lo que se exigía producir y entregar a las comunidades campesinas.",
       "importancia": "Industrialización → mayor demanda urbana → presión estatal sobre el campo."
     },
     {
       "nombre": "Obtener recursos",
       "fecha": "FINANCIACIÓN",
-      "hecho": "El régimen buscó obtener recursos de la agricultura y de las exportaciones de grano para sostener la industrialización y adquirir maquinaria.",
+      "hecho": "La industrialización requería inversiones y maquinaria, incluida tecnología adquirida en el extranjero. El régimen buscó obtener recursos de la agricultura y de las exportaciones de grano para apoyar ese esfuerzo. La presión sobre el campo estaba, por tanto, vinculada a las prioridades industriales y a la forma en que el Estado distribuía los recursos.",
       "importancia": "Control agrícola y extracción de recursos → apoyo a la inversión industrial."
     },
     {
       "nombre": "Costos humanos",
       "fecha": "CONSECUENCIAS",
-      "hecho": "Las metas impuestas y la coerción afectaron a trabajadores y campesinos. La colectivización y las requisas se vincularon a deportaciones, resistencia y hambruna.",
+      "hecho": "Las metas impuestas afectaron de distintas maneras a obreros y campesinos: exigencias de productividad, condiciones de vivienda precarias, confiscaciones y desplazamientos forzosos. En el campo, la colectivización y las requisas se relacionaron con resistencia, pérdidas productivas y hambruna. Evaluar la transformación económica exige considerar estos costos, además de la expansión industrial.",
       "importancia": "La expansión de la capacidad industrial no equivale a una mejora general de las condiciones de vida."
     }
   ],
