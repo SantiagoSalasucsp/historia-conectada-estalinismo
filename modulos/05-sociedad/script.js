@@ -80,3 +80,18 @@ contenido.referencias.forEach(fuente => {
 });
 contenido.otrasLecturas.forEach(texto => document.querySelector('#otras-lecturas').append(crear('p', texto)));
 avisarCoincidencia(); mostrarApartado(0);
+
+// El video es local: también funciona desde la carpeta descomprimida.
+const botonVideo = document.querySelector('#ver-video');
+const zonaVideo = document.querySelector('#reproductor-modulo');
+const videoEquipo = document.querySelector('#video-equipo');
+botonVideo.addEventListener('click', () => {
+  const abrir = zonaVideo.hidden;
+  zonaVideo.hidden = !abrir;
+  botonVideo.setAttribute('aria-expanded', String(abrir));
+  botonVideo.textContent = abrir ? 'Cerrar video −' : '▷ Ver video del módulo';
+  if (!abrir) videoEquipo.pause();
+});
+videoEquipo.addEventListener('error', () => {
+  document.querySelector('#estado-video').textContent = 'No se pudo reproducir el archivo. Prueba el enlace para abrirlo por separado.';
+});
