@@ -6,3 +6,11 @@
 .apartados{grid-template-columns:250px minmax(0,1fr);gap:40px}.punto-economia{padding:17px 0;border-bottom:1px solid var(--borde)}.punto-economia:first-of-type{padding-top:0}.punto-economia h4{font-size:14px;color:var(--arena);margin:0 0 8px}.punto-economia p{font-size:15px;margin:0;max-width:850px;color:#d0d5cb}.idea-economia{margin-top:26px;padding:18px 22px;border-left:2px solid var(--arena);background:#d7c29d08}.idea-economia .etiqueta{font-size:9px}.idea-economia p{font-size:15px;margin:12px 0 0}.citas-economia{display:flex;gap:12px;font-size:11px;color:var(--suave);margin-top:18px}.citas-economia a{color:var(--arena);text-decoration:underline}.instruccion{font-size:12px;color:var(--suave)}.relaciones{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.relaciones button{background:transparent;color:var(--texto);border:1px solid var(--borde);padding:14px 8px;font-size:12px}.relaciones button.seleccionada{background:var(--arena);color:var(--fondo);border-color:var(--arena)}.ficha-relacion{padding:28px;border:1px solid var(--borde);border-top:0;min-height:240px}.ficha-relacion h4{font:30px Georgia,serif;margin:10px 0 18px}.ficha-relacion p{font-size:15px}.ficha-relacion .importancia{font-size:13px;color:var(--arena);margin:0}.referencia-economia{border-bottom:1px solid var(--borde);padding:22px 0;scroll-margin-top:30px}.referencia-economia p{font-size:14px;max-width:1000px;margin:10px 0}.referencia-economia a{font-size:12px;color:var(--arena);text-decoration:underline}#referencias{white-space:normal}@media(max-width:700px){.apartados{grid-template-columns:1fr;gap:28px}.relaciones{grid-template-columns:1fr 1fr}.punto-economia p,.ficha-relacion p{font-size:14px}.ficha-relacion{padding:20px}.modulo-cabecera img{display:none}}
 
 .nota-bibliografica{margin-top:28px;font-size:12px;color:var(--suave)}.nota-bibliografica summary{cursor:pointer;color:var(--arena)}.nota-bibliografica p{margin-top:15px}
+
+/* Reproductor local integrado. */
+#reproductor-modulo{padding:24px 0 30px;border-bottom:1px solid var(--borde)}
+#reproductor-modulo[hidden]{display:none}
+#video-equipo{display:block;width:100%;max-height:75vh;background:#080b09;margin:0 auto 15px}
+.estado-video{font-size:12px;color:var(--arena)}
+.estado-video:empty{display:none}
+.enlace-video{font-size:12px;color:var(--arena);text-decoration:underline}
